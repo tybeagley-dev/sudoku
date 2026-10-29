@@ -187,7 +187,7 @@ function render(popSteps = []) {
     if (sel !== null && i !== sel && (ROW[i] === ROW[sel] || COL[i] === COL[sel] || BOX[i] === BOX[sel])) cls.push('peer');
     if (selVal && v === selVal) cls.push('same');
     if (i === sel) cls.push('selected');
-    if (v && PEERS[i].some(p => s.values[p] === v)) cls.push('conflict');
+    if (v && (v !== s.solution[i] || PEERS[i].some(p => s.values[p] === v))) cls.push('conflict');
     if (i === s.contradiction) cls.push('contradiction');
     if (popOrder.has(i)) cls.push('pop');
     cells[i].className = cls.join(' ');
