@@ -34,13 +34,14 @@ main {
   max-width: 520px;
   margin: 0 auto;
   min-height: 100%;
-  padding: calc(env(safe-area-inset-top) + 12px) 16px calc(env(safe-area-inset-bottom) + 16px);
+  padding: calc(env(safe-area-inset-top) + 12px) 8px calc(env(safe-area-inset-bottom) + 16px);
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
 header {
+  padding: 0 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -120,12 +121,14 @@ button[aria-pressed="true"] { background: var(--select); color: var(--user); }
 .notes .hit { color: var(--user); font-weight: 700; }
 
 #actions {
+  margin-top: clamp(16px, 6vh, 64px);
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
 }
 
 #pad {
+  margin-top: clamp(12px, 4vh, 44px);
   display: grid;
   grid-template-columns: repeat(9, minmax(0, 1fr));
   gap: 6px;
